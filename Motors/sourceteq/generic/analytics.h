@@ -4,6 +4,7 @@
 
 +(instancetype)singleton;
 -(void)start;
+-(void)screen:(NSString*)name;
 
 @property(weak, nonatomic)Mofiler *mofiler;
 

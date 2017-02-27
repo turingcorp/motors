@@ -77,6 +77,16 @@ NSString *const kMofilerUrl = @"mofiler.com";
     [self.mofiler flushDataToMofiler];
 }
 
+-(void)screen:(NSString*)name
+{
+    NSString *screenName = [NSString stringWithFormat:@"%@.%@",
+                            kKeyScreen,
+                            name];
+    NSString *countString = [self countFor:screenName];
+    NSDictionary *log = @{screenName:countString};
+    [self inject:log];
+}
+
 #pragma mark -
 #pragma mark mofiler del
 
