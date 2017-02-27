@@ -162,6 +162,7 @@
 		DAC104361BED6BB600338201 /* modsites.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC104351BED6BB600338201 /* modsites.m */; };
 		DAC104391BED8E6900338201 /* locman.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC104381BED8E6900338201 /* locman.m */; };
 		DAC3B6201E64AECA0082345B /* Mofiler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC3B61F1E64AECA0082345B /* Mofiler.framework */; };
+		DAC3B62A1E64B0080082345B /* analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC3B6291E64B0080082345B /* analytics.m */; };
 		DADBC3031BD81A480093F983 /* leftgrad.png in Resources */ = {isa = PBXBuildFile; fileRef = DADBC3001BD81A480093F983 /* leftgrad.png */; };
 		DADBC3041BD81A480093F983 /* leftgrad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DADBC3011BD81A480093F983 /* leftgrad@2x.png */; };
 		DADBC3051BD81A480093F983 /* leftgrad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DADBC3021BD81A480093F983 /* leftgrad@3x.png */; };
@@ -387,6 +388,8 @@
 		DAC104371BED8E6900338201 /* locman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locman.h; sourceTree = "<group>"; };
 		DAC104381BED8E6900338201 /* locman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locman.m; sourceTree = "<group>"; };
 		DAC3B61F1E64AECA0082345B /* Mofiler.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mofiler.framework; path = Carthage/Build/iOS/Mofiler.framework; sourceTree = "<group>"; };
+		DAC3B6281E64B0080082345B /* analytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = analytics.h; sourceTree = "<group>"; };
+		DAC3B6291E64B0080082345B /* analytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = analytics.m; sourceTree = "<group>"; };
 		DADBC3001BD81A480093F983 /* leftgrad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftgrad.png; sourceTree = "<group>"; };
 		DADBC3011BD81A480093F983 /* leftgrad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftgrad@2x.png"; sourceTree = "<group>"; };
 		DADBC3021BD81A480093F983 /* leftgrad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftgrad@3x.png"; sourceTree = "<group>"; };
@@ -677,6 +680,8 @@
 				DA7621BA1BD5691E0035CBAE /* updater.m */,
 				DAB7969A1BF0DBDF0097F2B2 /* locater.h */,
 				DAB7969B1BF0DBDF0097F2B2 /* locater.m */,
+				DAC3B6281E64B0080082345B /* analytics.h */,
+				DAC3B6291E64B0080082345B /* analytics.m */,
 			);
 			path = generic;
 			sourceTree = "<group>";
@@ -1033,6 +1038,7 @@
 			files = (
 				DA0663691BFFF939009261F1 /* modfilters.m in Sources */,
 				DA7621F51BD5691E0035CBAE /* cloudimg.m in Sources */,
+				DAC3B62A1E64B0080082345B /* analytics.m in Sources */,
 				DA1E596A1BD6B31200A66FF9 /* visearchman.m in Sources */,
 				DA7621EE1BD5691E0035CBAE /* main.m in Sources */,
 				DA410D151C0DDB9D00D9089D /* vistore.m in Sources */,

@@ -17,6 +17,7 @@ typedef enum
 #import <AVFoundation/AVFoundation.h>
 #import <MapKit/MapKit.h>
 #import <AddressBook/AddressBook.h>
+#import <Mofiler/Mofiler-Swift.h>
 #import <StoreKit/StoreKit.h>
 #import "timerbg.h"
 #import "db.h"
