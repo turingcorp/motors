@@ -9,9 +9,6 @@ NSString *const kMofilerUrl = @"mofiler.com";
 @implementation analytics
 {
     NSMutableDictionary *tracked;
-    NSArray *screens;
-    NSArray *events;
-    NSArray *actions;
     NSString *userName;
 }
 
@@ -29,10 +26,6 @@ NSString *const kMofilerUrl = @"mofiler.com";
     self = [super init];
     
     tracked = [NSMutableDictionary dictionary];
-    NSDictionary *plist = [NSDictionary dictionaryWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"analytics" withExtension:@"plist"]];
-    screens = plist[@"screens"];
-    events = plist[@"events"];
-    actions = plist[@"actions"];
     userName = [NSUUID UUID].UUIDString;
     
     return self;
@@ -75,36 +68,13 @@ NSString *const kMofilerUrl = @"mofiler.com";
     identity[kKeyUsername] = userName;
     
     self.mofiler = [Mofiler sharedInstance];
-    [self.mofiler initializeWithAppKey:analyticsKey appName:analyticsId useAdvertisingId:true];
+    [self.mofiler initializeWithAppKey:analyticsKey appName:analyticsId useLoc:true useAdvertisingId:true];
     [self.mofiler addIdentityWithIdentity:identity];
     self.mofiler.delegate = self;
     self.mofiler.url = kMofilerUrl;
-    self.mofiler.useLocation = true;
     self.mofiler.useVerboseContext = false;
     self.mofiler.debugLogging = false;
     [self.mofiler flushDataToMofiler];
-}
-
--(void)trackscreen:(ga_screen)screen
-{
-    NSString *screenName = [NSString stringWithFormat:@"%@.%@",
-                            kKeyScreen,
-                            screens[screen]];
-    NSString *countString = [self countFor:screenName];
-    NSDictionary *log = @{screenName:countString};
-    [self inject:log];
-}
-
--(void)trackevent:(ga_event)event action:(ga_action)action label:(NSString*)label
-{
-    NSString *eventname = events[event];
-    NSString *eventaction = actions[action];
-    NSString *eventNameAction = [NSString stringWithFormat:@"%@.%@",
-                                 eventname,
-                                 eventaction];
-    NSString *countString = [self countFor:eventNameAction];
-    NSDictionary *log = @{eventNameAction:countString};
-    [self inject:log];
 }
 
 #pragma mark -
