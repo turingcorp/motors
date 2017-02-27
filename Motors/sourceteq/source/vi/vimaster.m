@@ -162,6 +162,8 @@
         {
             case appsectionsearch:
                 
+                [[analytics singleton] screen:@"Search"];
+                
                 title = @"";
                 [bar hidefavmenu];
                 [bar showfiltermenu];
@@ -170,6 +172,8 @@
                 break;
                 
             case appsectionfavorites:
+                
+                [[analytics singleton] screen:@"Favorites"];
                 
                 title = @"";
                 [bar showfavmenu];
@@ -180,6 +184,8 @@
                 
             case appsectionpricesguide:
                 
+                [[analytics singleton] screen:@"PricesGuide"];
+                
                 title = NSLocalizedString(@"prices_title", nil);
                 [bar hidefavmenu];
                 [bar hidefiltermenu];
@@ -189,6 +195,8 @@
                 
             case appsectionsettings:
                 
+                [[analytics singleton] screen:@"Settings"];
+                
                 title = NSLocalizedString(@"settings_title", nil);
                 [bar hidefavmenu];
                 [bar hidefiltermenu];
@@ -197,6 +205,8 @@
                 break;
                 
             case appsectionstore:
+                
+                [[analytics singleton] screen:@"Store"];
                 
                 title = NSLocalizedString(@"store_title", nil);
                 [bar hidefavmenu];

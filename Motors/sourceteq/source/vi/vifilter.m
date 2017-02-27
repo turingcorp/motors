@@ -786,6 +786,8 @@
 
 -(void)actionquery
 {
+    [[analytics singleton] screen:@"Search query"];
+    
     if([modsettings sha].searchquery)
     {
         [barfield.field setText:[modsettings sha].searchquery];
@@ -813,6 +815,8 @@
 
 -(void)actionfilter
 {
+    [[analytics singleton] screen:@"Filters"];
+    
     [vifilter show:filters];
 }
 
