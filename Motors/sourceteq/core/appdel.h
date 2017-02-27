@@ -19,6 +19,7 @@ typedef enum
 #import <AddressBook/AddressBook.h>
 #import <Mofiler/Mofiler-Swift.h>
 #import <StoreKit/StoreKit.h>
+#import "analytics.h"
 #import "timerbg.h"
 #import "db.h"
 #import "mod.h"
