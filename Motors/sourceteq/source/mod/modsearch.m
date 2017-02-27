@@ -617,40 +617,44 @@
                                    {
                                        NSString *rawname = inattr[@"name"];
                                        NSString *rawvalue = inattr[@"value_name"];
-                                       NSString *valuenocaps = rawvalue.lowercaseString;
                                        
-                                       if([tools parsestringvalid:rawname] && [tools parsestringvalid:rawvalue])
+                                       if([tools notnullorempty:rawname] && [tools notnullorempty:rawvalue])
                                        {
-                                           if([rawname isEqualToString:@"Horario de contacto"])
+                                           NSString *valuenocaps = rawvalue.lowercaseString;
+                                           
+                                           if([tools parsestringvalid:rawname] && [tools parsestringvalid:rawvalue])
                                            {
-                                               if(!item.contact.openhours.length)
+                                               if([rawname isEqualToString:@"Horario de contacto"])
                                                {
-                                                   item.contact.openhours = rawvalue;
-                                               }
-                                           }
-                                           else
-                                           {
-                                               if([valuenocaps isEqualToString:@"sí"] || [valuenocaps isEqualToString:@"si"] || [valuenocaps isEqualToString:@"y"])
-                                               {
-                                                   moditemattributesimple *rawattr = [[moditemattributesimple alloc] init];
-                                                   rawattr.title = rawname;
-                                                   [item.attributes add:rawattr];
-                                               }
-                                               else if(![valuenocaps isEqualToString:@"no"] && ![valuenocaps isEqualToString:@"n"] && ![valuenocaps isEqualToString:@"n/a"])
-                                               {
-                                                   if([[tools sha] numberfromstring:rawvalue])
+                                                   if(!item.contact.openhours.length)
                                                    {
-                                                       moditemattributenum *rawattr = [[moditemattributenum alloc] init];
-                                                       rawattr.name = rawname;
-                                                       rawattr.value = @(rawvalue.floatValue);
-                                                       [item.attributes prepend:rawattr];
+                                                       item.contact.openhours = rawvalue;
                                                    }
-                                                   else
+                                               }
+                                               else
+                                               {
+                                                   if([valuenocaps isEqualToString:@"sí"] || [valuenocaps isEqualToString:@"si"] || [valuenocaps isEqualToString:@"y"])
                                                    {
-                                                       moditemattributecomplex *rawattr = [[moditemattributecomplex alloc] init];
-                                                       rawattr.name = rawname;
-                                                       rawattr.value = rawvalue;
-                                                       [item.attributes insertafternum:rawattr];
+                                                       moditemattributesimple *rawattr = [[moditemattributesimple alloc] init];
+                                                       rawattr.title = rawname;
+                                                       [item.attributes add:rawattr];
+                                                   }
+                                                   else if(![valuenocaps isEqualToString:@"no"] && ![valuenocaps isEqualToString:@"n"] && ![valuenocaps isEqualToString:@"n/a"])
+                                                   {
+                                                       if([[tools sha] numberfromstring:rawvalue])
+                                                       {
+                                                           moditemattributenum *rawattr = [[moditemattributenum alloc] init];
+                                                           rawattr.name = rawname;
+                                                           rawattr.value = @(rawvalue.floatValue);
+                                                           [item.attributes prepend:rawattr];
+                                                       }
+                                                       else
+                                                       {
+                                                           moditemattributecomplex *rawattr = [[moditemattributecomplex alloc] init];
+                                                           rawattr.name = rawname;
+                                                           rawattr.value = rawvalue;
+                                                           [item.attributes insertafternum:rawattr];
+                                                       }
                                                    }
                                                }
                                            }
