@@ -204,6 +204,8 @@
                 [self configstore];
                 
                 break;
+                
+            default:break;
         }
         
         [menu opensection:_section];
