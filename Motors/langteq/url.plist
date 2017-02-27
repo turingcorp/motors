@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>server</key>
+	<string>https://api.mercadolibre.com</string>
+	<key>sites</key>
+	<string>sites</string>
+	<key>search</key>
+	<string>search</string>
+	<key>items</key>
+	<string>items</string>
+	<key>cats</key>
+	<string>categories</string>
+	<key>supercategory</key>
+	<string>1743</string>
+</dict>
+</plist>

@@ -1,0 +1,52 @@
+"countries_accept"="Accept";
+
+"error_nolocation"="Couldn't get your location, using default instead";
+"error_nocountry"="Using default country, change it in settings";
+"error_connectionfailed"="Internet connection failed, try again";
+"request_error_dataempty"="Server error, try again";
+"request_error_invalidparse"="Invalid response, try again";
+"location_foundcountry"="Showing results for %@";
+
+"settings_title"="Settings";
+
+"menu_search"="Search";
+"menu_account"="Profile";
+"menu_favorites"="Favorites";
+"menu_listings"="Publications";
+"menu_photocenters"="Photo Centers";
+"menu_settings"="Settings";
+"menu_pricesguide"="Prices guide";
+"menu_store"="Store";
+
+"search_btnretry"="Retry";
+"search_btncancel"="Cancel";
+"search_btnsearch"="Search";
+"search_field_placeholder"="Search";
+"search_empty"="No results found";
+
+"filters_title"="Filters";
+"filters_title_category"="Category";
+"filters_title_location"="Location";
+"filters_title_year"="Year";
+"filters_default_category"="All categories";
+"filters_default_location"="All locations";
+"filters_default_year"="All";
+
+"favorites_empty"="Nothing found here yet";
+
+"prices_title"="Prices guide";
+"prices_nonselected"="Select a category";
+"prices_again"="Another search";
+"prices_notavailable"="Prices guide is available once every 24 hours.\n\nPurchase the Unlimited Prices Guide to access it as often as you want.";
+"prices_btn_purchase"="Store";
+"prices_error_nodata"="Not enough data, try a different category";
+
+"store_title"="Store";
+"store_btn_restore"="Restore purchases";
+"store_btn_purchase"="Purchase";
+"store_purchased"="Purchased";
+
+"perk_prices_title"="Unlimited prices guide";
+"perk_prices_descr"="Use the prices guide as often as you want, no more restrictions.";
+
+"vip_showmap"="Show map";

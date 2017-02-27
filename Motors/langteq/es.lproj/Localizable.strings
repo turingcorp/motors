@@ -1,0 +1,52 @@
+"countries_accept"="Aceptar";
+
+"error_nolocation"="No pudimos obtener tu localizacion, usando la predeterminada";
+"error_nocountry"="Usando el pais predeterminado, cambialo en la configuracion";
+"error_connectionfailed"="Fallo la conexion a internet, intenta de nuevo";
+"request_error_dataempty"="Error de servidor, intenta de nuevo";
+"request_error_invalidparse"="Respuesta invalida, intenta de nuevo";
+"location_foundcountry"="Mostrando resultados para %@";
+
+"settings_title"="Configuracion";
+
+"menu_search"="Busqueda";
+"menu_account"="Perfil";
+"menu_favorites"="Favoritos";
+"menu_listings"="Publicaciones";
+"menu_photocenters"="Centros de fotografia";
+"menu_settings"="Configuracion";
+"menu_pricesguide"="Guia de precios";
+"menu_store"="Tienda";
+
+"search_btnretry"="Reintentar";
+"search_btncancel"="Cancelar";
+"search_btnsearch"="Buscar";
+"search_field_placeholder"="Buscar";
+"search_empty"="No se encontraron resultados";
+
+"filters_title"="Filtros";
+"filters_title_category"="Categoria";
+"filters_title_location"="Ubicacion";
+"filters_title_year"="Año";
+"filters_default_category"="Todas las categorias";
+"filters_default_location"="Todas las ubicaciones";
+"filters_default_year"="Todas";
+
+"favorites_empty"="Aun no hay nada aqui";
+
+"prices_title"="Guia de precios";
+"prices_nonselected"="Selecciona una categoria";
+"prices_again"="Otra busqueda";
+"prices_notavailable"="La guia de precios esta disponible una vez cada 24 horas.\n\nComprar la Guia de Precios ilimitada para quitar esta restriccion.";
+"prices_btn_purchase"="Tienda";
+"prices_error_nodata"="Sin datos suficientes, intenta otra categoria";
+
+"store_title"="Tienda";
+"store_btn_restore"="Restaurar compras";
+"store_btn_purchase"="Comprar";
+"store_purchased"="Comprado";
+
+"perk_prices_title"="Guia de precios ilimitada";
+"perk_prices_descr"="Usa la guia de precios tantas veces como quieras, sin restricciones.";
+
+"vip_showmap"="Mostrar mapa";

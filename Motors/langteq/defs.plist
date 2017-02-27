@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>appid</key>
+	<string>1052383125</string>
+	<key>version</key>
+	<integer>131</integer>
+	<key>dbname</key>
+	<string>motors.db</string>
+	<key>dbfolder</key>
+	<string>sqlite</string>
+	<key>imagesfolder</key>
+	<string>images</string>
+</dict>
+</plist>
