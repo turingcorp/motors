@@ -786,7 +786,7 @@
 
 -(void)actionquery
 {
-    [[analytics singleton] screen:@"Search query"];
+    [[analytics singleton] event:@"SearchStart"];
     
     if([modsettings sha].searchquery)
     {
@@ -920,6 +920,8 @@
 
 -(void)actioncancel
 {
+    [[analytics singleton] event:@"SearchCancel"];
+    
     [[modsettings sha] editquery:nil];
     [[UIApplication sharedApplication].keyWindow endEditing:YES];
     [field setText:@""];
@@ -927,6 +929,8 @@
 
 -(void)actionsearch
 {
+    [[analytics singleton] event:@"SearchSend"];
+    
     [[modsettings sha] editquery:field.text];
     [field resignFirstResponder];
 }

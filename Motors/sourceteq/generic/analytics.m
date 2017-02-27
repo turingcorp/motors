@@ -3,6 +3,7 @@
 NSString *const analyticsId = @"Motors";
 NSString *const analyticsKey = @"MOTORS";
 NSString *const kKeyScreen = @"screen";
+NSString *const kKeyEvent = @"event";
 NSString *const kKeyUserId = @"userId";
 NSString *const kMofilerUrl = @"mofiler.com";
 
@@ -87,6 +88,21 @@ NSString *const kMofilerUrl = @"mofiler.com";
                                                name];
                        NSString *countString = [self countFor:screenName];
                        NSDictionary *log = @{screenName:countString};
+                       [self inject:log];
+                       
+                   });
+}
+
+-(void)event:(NSString*)name
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^(void)
+                   {
+                       NSString *eventName = [NSString stringWithFormat:@"%@.%@",
+                                               kKeyEvent,
+                                               name];
+                       NSString *countString = [self countFor:eventName];
+                       NSDictionary *log = @{eventName:countString};
                        [self inject:log];
                        
                    });

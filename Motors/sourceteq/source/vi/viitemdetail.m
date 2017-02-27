@@ -13,6 +13,8 @@
 
 +(void)show:(modinitem*)_item
 {
+    [[analytics singleton] screen:@"FavoritesItem"];
+    
     dispatch_async(dispatch_get_main_queue(),
                    ^(void)
                    {

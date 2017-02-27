@@ -381,6 +381,8 @@
 
 -(void)actionrestart
 {
+    [[analytics singleton] event:@"PricesGuideRestart"];
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:notrestartprices object:nil];
 }
 

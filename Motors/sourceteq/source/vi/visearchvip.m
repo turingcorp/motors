@@ -11,6 +11,8 @@
 
 -(visearchvip*)initWithFrame:(CGRect)_rect pictures:(moditempictures*)_pictures
 {
+    [[analytics singleton] screen:@"SearchItem"];
+    
     self = [super initWithFrame:_rect];
     [self setClipsToBounds:YES];
     [self setBackgroundColor:[UIColor blackColor]];
