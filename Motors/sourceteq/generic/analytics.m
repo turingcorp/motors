@@ -2,14 +2,14 @@
 
 NSString *const analyticsId = @"Motors";
 NSString *const analyticsKey = @"MOTORS";
-NSString *const kKeyUsername = @"username";
 NSString *const kKeyScreen = @"screen";
+NSString *const kKeyUserId = @"userId";
 NSString *const kMofilerUrl = @"mofiler.com";
 
 @implementation analytics
 {
     NSMutableDictionary *tracked;
-    NSString *userName;
+    NSString *userId;
 }
 
 +(instancetype)singleton
@@ -26,7 +26,7 @@ NSString *const kMofilerUrl = @"mofiler.com";
     self = [super init];
     
     tracked = [NSMutableDictionary dictionary];
-    userName = [NSUUID UUID].UUIDString;
+    userId = [NSUUID UUID].UUIDString;
     
     return self;
 }
@@ -65,17 +65,11 @@ NSString *const kMofilerUrl = @"mofiler.com";
 -(void)start
 {
     NSMutableDictionary *identity = [NSMutableDictionary dictionary];
-    identity[kKeyUsername] = @"defaultjohn";
-    identity[@"email"] = @"default@mail.com";
-    identity[@"name"] = @"default";
-    
-    NSLog(@"username %@", userName);
+    identity[kKeyUserId] = userId;
     
     self.mofiler = [Mofiler sharedInstance];
     [self.mofiler initializeWithAppKey:analyticsKey appName:analyticsId useLoc:true useAdvertisingId:true];
-    [self.mofiler addIdentityWithIdentity:@{@"username":@"defaultJohn"}];
-    [self.mofiler addIdentityWithIdentity:@{@"email":@"default@mail.com"}];
-    [self.mofiler addIdentityWithIdentity:@{@"name":@"default"}];
+    [self.mofiler addIdentityWithIdentity:identity];
     self.mofiler.delegate = self;
     self.mofiler.url = kMofilerUrl;
     self.mofiler.useVerboseContext = false;
@@ -85,12 +79,17 @@ NSString *const kMofilerUrl = @"mofiler.com";
 
 -(void)screen:(NSString*)name
 {
-    NSString *screenName = [NSString stringWithFormat:@"%@.%@",
-                            kKeyScreen,
-                            name];
-    NSString *countString = [self countFor:screenName];
-    NSDictionary *log = @{screenName:countString};
-    [self inject:log];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
+                   ^(void)
+                   {
+                       NSString *screenName = [NSString stringWithFormat:@"%@.%@",
+                                               kKeyScreen,
+                                               name];
+                       NSString *countString = [self countFor:screenName];
+                       NSDictionary *log = @{screenName:countString};
+                       [self inject:log];
+                       
+                   });
 }
 
 #pragma mark -
