@@ -65,11 +65,17 @@ NSString *const kMofilerUrl = @"mofiler.com";
 -(void)start
 {
     NSMutableDictionary *identity = [NSMutableDictionary dictionary];
-    identity[kKeyUsername] = userName;
+    identity[kKeyUsername] = @"defaultjohn";
+    identity[@"email"] = @"default@mail.com";
+    identity[@"name"] = @"default";
+    
+    NSLog(@"username %@", userName);
     
     self.mofiler = [Mofiler sharedInstance];
     [self.mofiler initializeWithAppKey:analyticsKey appName:analyticsId useLoc:true useAdvertisingId:true];
-    [self.mofiler addIdentityWithIdentity:identity];
+    [self.mofiler addIdentityWithIdentity:@{@"username":@"defaultJohn"}];
+    [self.mofiler addIdentityWithIdentity:@{@"email":@"default@mail.com"}];
+    [self.mofiler addIdentityWithIdentity:@{@"name":@"default"}];
     self.mofiler.delegate = self;
     self.mofiler.url = kMofilerUrl;
     self.mofiler.useVerboseContext = false;

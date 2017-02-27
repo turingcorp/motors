@@ -58,6 +58,8 @@
 {
     [[UIApplication sharedApplication].keyWindow endEditing:YES];
     
+    [[analytics singleton] screen:@"Menu"];
+    
     switch([vimaster sha].menustate)
     {
         case appmenustatehide:
