@@ -161,6 +161,7 @@
 		DAC104331BED6BA000338201 /* MRD@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAC104061BED6BA000338201 /* MRD@3x.png */; };
 		DAC104361BED6BB600338201 /* modsites.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC104351BED6BB600338201 /* modsites.m */; };
 		DAC104391BED8E6900338201 /* locman.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC104381BED8E6900338201 /* locman.m */; };
+		DAC3B6201E64AECA0082345B /* Mofiler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAC3B61F1E64AECA0082345B /* Mofiler.framework */; };
 		DADBC3031BD81A480093F983 /* leftgrad.png in Resources */ = {isa = PBXBuildFile; fileRef = DADBC3001BD81A480093F983 /* leftgrad.png */; };
 		DADBC3041BD81A480093F983 /* leftgrad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DADBC3011BD81A480093F983 /* leftgrad@2x.png */; };
 		DADBC3051BD81A480093F983 /* leftgrad@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DADBC3021BD81A480093F983 /* leftgrad@3x.png */; };
@@ -385,6 +386,7 @@
 		DAC104351BED6BB600338201 /* modsites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = modsites.m; sourceTree = "<group>"; };
 		DAC104371BED8E6900338201 /* locman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locman.h; sourceTree = "<group>"; };
 		DAC104381BED8E6900338201 /* locman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = locman.m; sourceTree = "<group>"; };
+		DAC3B61F1E64AECA0082345B /* Mofiler.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mofiler.framework; path = Carthage/Build/iOS/Mofiler.framework; sourceTree = "<group>"; };
 		DADBC3001BD81A480093F983 /* leftgrad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftgrad.png; sourceTree = "<group>"; };
 		DADBC3011BD81A480093F983 /* leftgrad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftgrad@2x.png"; sourceTree = "<group>"; };
 		DADBC3021BD81A480093F983 /* leftgrad@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leftgrad@3x.png"; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 				DA7622371BD594160035CBAE /* libtimerbg.a in Frameworks */,
 				DA7622041BD56BFD0035CBAE /* libsqlite3.tbd in Frameworks */,
 				DA7622201BD58EE40035CBAE /* libdb.a in Frameworks */,
+				DAC3B6201E64AECA0082345B /* Mofiler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,6 +496,7 @@
 				DA7622031BD56BFD0035CBAE /* libsqlite3.tbd */,
 				DA76217D1BD568150035CBAE /* Motors */,
 				DA76217C1BD568150035CBAE /* Products */,
+				DAC3B61E1E64AECA0082345B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -812,6 +816,14 @@
 				DA7622391BD594230035CBAE /* timerbg.h */,
 			);
 			path = timerbg;
+			sourceTree = "<group>";
+		};
+		DAC3B61E1E64AECA0082345B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAC3B61F1E64AECA0082345B /* Mofiler.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1170,6 +1182,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Motors/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1193,6 +1209,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7AMWG3RLHN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Motors/sourceteq/core/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
