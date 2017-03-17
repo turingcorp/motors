@@ -32,6 +32,7 @@
 
 -(void)applicationDidBecomeActive:(UIApplication*)_app
 {
+    [[AppsFlyerTracker sharedTracker] trackAppLaunch];
 }
 
 -(void)applicationWillTerminate:(UIApplication*)_app

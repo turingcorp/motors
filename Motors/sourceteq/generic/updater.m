@@ -12,10 +12,14 @@ CGRect screenrect;
 apptype applicationtype;
 ioslevel applicationios;
 CGFloat resultlblwidth;
+NSString *const kAppsFlyerDevKey = @"g8TjryqG8FWgH826PratvY";
+NSString *const kAppId = @"1052383125";
 
 +(void)launch
 {
     [[analytics singleton] start];
+    [AppsFlyerTracker sharedTracker].appsFlyerDevKey = kAppsFlyerDevKey;
+    [AppsFlyerTracker sharedTracker].appleAppID = kAppId;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),
                    ^(void)
