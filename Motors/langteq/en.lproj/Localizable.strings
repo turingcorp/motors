@@ -50,3 +50,8 @@
 "perk_prices_descr"="Use the prices guide as often as you want, no more restrictions.";
 
 "vip_showmap"="Show map";
+
+"ttl_title"="Give us some feedback";
+"ttl_message"="Write a review on the App Store";
+"ttl_cancel"="Not now";
+"ttl_rate"="Sure";

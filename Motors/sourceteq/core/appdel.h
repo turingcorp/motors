@@ -30,6 +30,6 @@ typedef enum
 #import "cloud.h"
 #import "sk.h"
 
-@interface appdel:UIResponder<UIApplicationDelegate>
+@interface appdel:UIResponder<UIApplicationDelegate, UIAlertViewDelegate>
 
 @end
