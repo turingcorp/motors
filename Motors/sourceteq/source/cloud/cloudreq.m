@@ -44,9 +44,6 @@
     switch(type)
     {
         case cloudreqtypelogin:
-            
-            break;
-            
         case cloudreqtypesearch:
             
             timeout = 40;
@@ -105,8 +102,6 @@
     }
     
     NSLog(@"%@", urlstr);
-    
-    url = [NSURL URLWithString:urlstr];
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration ephemeralSessionConfiguration];
     [configuration setAllowsCellularAccess:YES];
     [configuration setTimeoutIntervalForRequest:timeout];

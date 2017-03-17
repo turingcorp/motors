@@ -255,6 +255,8 @@
             
             height = 50;
             
+            break;
+            
         default:
             
             height = 34;
