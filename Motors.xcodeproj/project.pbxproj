@@ -39,6 +39,7 @@
 		DA6478F81BEADEFA00FF2F66 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6478F51BEADEFA00FF2F66 /* close.png */; };
 		DA6478F91BEADEFA00FF2F66 /* close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6478F61BEADEFA00FF2F66 /* close@2x.png */; };
 		DA6478FA1BEADEFA00FF2F66 /* close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6478F71BEADEFA00FF2F66 /* close@3x.png */; };
+		DA6692991E7C658B004CAEB9 /* AppsFlyerLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6692981E7C658B004CAEB9 /* AppsFlyerLib.framework */; };
 		DA6D99981C0CB23A00F31159 /* prices.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6D99951C0CB23A00F31159 /* prices.png */; };
 		DA6D99991C0CB23A00F31159 /* prices@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6D99961C0CB23A00F31159 /* prices@2x.png */; };
 		DA6D999A1C0CB23A00F31159 /* prices@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6D99971C0CB23A00F31159 /* prices@3x.png */; };
@@ -227,6 +228,7 @@
 		DA6478F51BEADEFA00FF2F66 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		DA6478F61BEADEFA00FF2F66 /* close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@2x.png"; sourceTree = "<group>"; };
 		DA6478F71BEADEFA00FF2F66 /* close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close@3x.png"; sourceTree = "<group>"; };
+		DA6692981E7C658B004CAEB9 /* AppsFlyerLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AppsFlyerLib.framework; sourceTree = "<group>"; };
 		DA6D99951C0CB23A00F31159 /* prices.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = prices.png; sourceTree = "<group>"; };
 		DA6D99961C0CB23A00F31159 /* prices@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prices@2x.png"; sourceTree = "<group>"; };
 		DA6D99971C0CB23A00F31159 /* prices@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "prices@3x.png"; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 				DA7622371BD594160035CBAE /* libtimerbg.a in Frameworks */,
 				DA7622041BD56BFD0035CBAE /* libsqlite3.tbd in Frameworks */,
 				DA7622201BD58EE40035CBAE /* libdb.a in Frameworks */,
+				DA6692991E7C658B004CAEB9 /* AppsFlyerLib.framework in Frameworks */,
 				DAC3B6201E64AECA0082345B /* Mofiler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -826,6 +829,7 @@
 		DAC3B61E1E64AECA0082345B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA6692981E7C658B004CAEB9 /* AppsFlyerLib.framework */,
 				DAC3B61F1E64AECA0082345B /* Mofiler.framework */,
 			);
 			name = Frameworks;
@@ -1213,6 +1217,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Motors/sourceteq/core/Info.plist";
@@ -1241,6 +1246,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Motors/sourceteq/core/Info.plist";
